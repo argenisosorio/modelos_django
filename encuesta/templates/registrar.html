@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block menu %}
+	<a href="{% url 'index' %}"><button>Inicio</button></a>
+	<a href="{% url 'registrar' %}"><button>Registrar</button></a>
+	<a href="{% url 'consultar' %}"><button>Consultar</button></a>
+{% endblock %}
+
+{% block cuerpo %}
+	<div >
+		<p />
+		<div align="center">
+			<b>Encuesta</b>
+		</div>
+		<p />
+		<form method="POST"> {% csrf_token %}			
+			<!--table>{{ form }}</table-->
+			<!--table border="1px" cellpadding="0px" cellspacing="8px" style="text-align: right">
+				<tr>
+					<td>Nombre: {{form.nombre}}</td>
+				</tr>
+				<tr>
+					<td>Apellido: {{form.apellido}}</td>
+				</tr>
+				<tr>
+					<td>Cédula: {{form.cedula}}</td>
+				</tr>
+				<tr>
+					<td>Teléfono: {{form.telefono}}</td>
+				</tr>
+				<tr>
+					<td>Email: {{form.email}}</td>
+				</tr>				
+				<tr>
+					<td>Nacionalidad: {{form.nacionalidad}}</td>
+				</tr>				
+				<tr>
+					<td>Feha: {{form.fecha}}</td>
+				</tr>
+				<tr>
+					<td>¿Que piensa de la empresa?: {{form.pregunta1}}</td>
+				</tr>
+			</table-->
+			<table border="0px" cellpadding="10px" cellspacing="5px">
+				<tr>
+					<td>Nombre: {{form.nombre}}</td>
+					<td>Apellido: {{form.apellido}}</td>
+					<td>Cédula: {{form.cedula}} </td>
+				</tr>				
+				<tr>
+					<td>Teléfono: {{form.telefono}}</td>
+					<td>Email: {{form.email}}</td>
+					<td>Nacionalidad: {{form.nacionalidad}}</td>
+				</tr>
+				<tr>
+					<td>Fecha: {{form.fecha}}</td>
+					<td></td>
+					<td></td>
+				</tr>				
+			</table>
+			<p />
+			<div id="layout_pregunta1">
+				¿Que piensa de la empresa?:<br /> {{form.pregunta1}}
+			</div>
+			<p />
+			<div id="terminos">
+				<b>Terminos y condiciones:</b> <p />
+				<span id="texto_terminos">
+					Los datos suministrados en esta encuesta serán publicados y podrán ser visualizados por otros usuarios, también serán almacenados para poder contactar con usted en el momento que sea necesario.
+				</span>
+				<p />
+				He leído y estoy de acuerdo con los terminos y condiciones de la encuesta
+				{{form.terminos}}
+			</div>
+			<p />
+			<div align="center">
+				<input type="submit" value="Enviar encuesta">
+				<input type="reset" value="Limpiar campos">
+			</div>
+		</form>
+	</div>
+{% endblock %}
+
+<div class="requerido"></div>

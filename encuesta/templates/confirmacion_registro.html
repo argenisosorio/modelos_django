@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block menu %}
+	<a href="{% url 'index' %}"><button>Inicio</button></a>
+	<a href="{% url 'registrar' %}"><button>Registrar</button></a>
+	<a href="{% url 'consultar' %}"><button>Consultar</button></a>
+{% endblock %}
+
+{% block cuerpo %}	
+	<div align="center">		
+		<p />
+		<h1>¡Registro exitoso!</h1>
+	</div>
+{% endblock %}
+

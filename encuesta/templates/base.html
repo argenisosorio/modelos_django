@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>
+			{% block titulo %}PLANTILLA{% endblock %}
+		</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" /> 		
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}" />		
+		<script src="{% static 'bootstrap/js/bootstrap.js' %}" type="text/javascript"></script>
+		
+	</head>
+<body>
+	<div id="completo">
+		<div id="cabecera">
+			{% block cabecera %}
+				<b>Empresa: XXXXXXXXXX</b>
+			{% endblock %}
+		</div>
+
+		<div id="menu">
+			{% block menu %}
+				<a href="/"><button>Inicio</button></a>
+			{% endblock %}
+		</div>
+
+		<div id="cuerpo">
+			{% block cuerpo %}				
+			{% endblock %}
+		</div>
+				
+		<div id="footer">			
+		</div>
+	</div>
+</body>
+</html>
