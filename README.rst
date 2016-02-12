@@ -1,12 +1,18 @@
-#########################
-##### Creado por dM #####
-#########################
+==============
+Modelos Django
+==============
+
+*Creado por dM*
 
 -- Versiones --
+===============
+``
 *Python-version=2.7.3
 *Django-version=1.5.8
+``
 
 -- Descripción --
+=================
 (Django - Modelos Django)
 
 Aplicación que sirve para mostrar
@@ -18,17 +24,20 @@ la documentarción oficial en:
 --> https://docs.djangoproject.com/en/1.5/ref/models/fields/
 
 En este ejemplo trabajaremos con:
+``
 *CharField y Choices
 *EmailField
 *DateField
 *TextField
 *BooleanField
+``
 
 Simulamos una empresa X que hace una encuesta
 a sus empleados, desplegamos varias interfaces
 para realizar la encuesta y consultar los datos.
 
 -- Instalación --
+=================
 La base de datos es sqlite3, al
 sincronizar se creara, así como
 creara la tabla y campos descritos
