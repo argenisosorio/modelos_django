@@ -6,10 +6,10 @@ Modelos Django
 
 -- Versiones --
 ===============
-``
+''
 *Python-version=2.7.3
 *Django-version=1.5.8
-``
+''
 
 -- Descripción --
 =================
@@ -24,13 +24,13 @@ la documentarción oficial en:
 --> https://docs.djangoproject.com/en/1.5/ref/models/fields/
 
 En este ejemplo trabajaremos con:
-``
+''
 *CharField y Choices
 *EmailField
 *DateField
 *TextField
 *BooleanField
-``
+''
 
 Simulamos una empresa X que hace una encuesta
 a sus empleados, desplegamos varias interfaces
