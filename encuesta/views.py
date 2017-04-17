@@ -16,18 +16,18 @@ def index(request):
 
 
 class Registrar(CreateView):
-	template_name = "registrar.html"
-	model = Persona
-	success_url = reverse_lazy('confirmacion_registro')
+    template_name = "registrar.html"
+    model = Persona
+    success_url = reverse_lazy('confirmacion_registro')
 
 
 
 class Confirmacion_registro(TemplateView):
-	template_name = "confirmacion_registro.html"
+    template_name = "confirmacion_registro.html"
 
 
 
 class Consultar(ListView):
-	model = Persona
-	template_name = "consultar.html"
-	context_object_name = "lista"
+    model = Persona
+    template_name = "consultar.html"
+    context_object_name = "lista"
